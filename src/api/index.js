@@ -6,11 +6,15 @@ const url = 'https://covid19.mathdro.id/api';
 //uses try and catch blocks
 //try is a success and catch is for error
 
+//destructure the data from the response
+//modData is only taking data desired from the object
+
 export const fetchData = async () => {
     try {
-        const resp = await axios.get(url);
+        const { data: { confirmed, recovered, deaths, lastUpdate } } = await axios.get(url);
         
-        return resp;
+        return { confirmed, recovered, deaths, lastUpdate };
+
     } catch (error) {
 
     }
