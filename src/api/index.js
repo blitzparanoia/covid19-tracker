@@ -9,9 +9,14 @@ const url = 'https://covid19.mathdro.id/api';
 //destructure the data from the response
 //modData is only taking data desired from the object
 
-export const fetchData = async () => {
+export const fetchData = async (country) => {
+    let changeUrl = url;
+
+    if (country) {
+        changeUrl = `${url}/countries/${country}`
+    }
     try {
-        const { data: { confirmed, recovered, deaths, lastUpdate } } = await axios.get(url);
+        const { data: { confirmed, recovered, deaths, lastUpdate } } = await axios.get(changeUrl);
         
         return { confirmed, recovered, deaths, lastUpdate };
 
