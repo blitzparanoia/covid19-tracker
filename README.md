@@ -1,6 +1,6 @@
 # COVID-19 Tracker
 
-WorkingDemo: [Live COVID-19 Tracker](https://blitzparanoia.github.io/covid19-tracker/)
+Working Demo: [Live COVID-19 Tracker](https://blitzparanoia.github.io/covid19-tracker/)
 
 ## Useage
 The page loads showing global status of COVID-19. User can select a country using the dropdown menu to see specific country stats. The chart changes to a bar chart showing the specifc county stats.
